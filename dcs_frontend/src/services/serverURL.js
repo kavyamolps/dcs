@@ -1,1 +1,1 @@
-export const serverURL = "http://localhost:3000";
+export const serverURL = "https://decision-companion-system-lyq7.onrender.com";
