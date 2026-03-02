@@ -25,7 +25,7 @@ function Home() {
   const [showSidebar, setShowSidebar] = useState(false);
   const handleHistory = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/get_user_decisions", {
+    const response = await fetch("https://decision-companion-system-lyq7.onrender.com/api/get_user_decisions", {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
       }
