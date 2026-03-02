@@ -165,7 +165,6 @@ function Auth({ register }) {
     console.log('Login Failed');
   }}
   size="large"
-  width={400}
 />
               </div>
 
