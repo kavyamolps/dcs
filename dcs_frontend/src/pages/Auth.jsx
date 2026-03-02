@@ -163,6 +163,8 @@ function Auth({ register }) {
   onError={() => {
     console.log('Login Failed');
   }}
+  size="large"
+  width="100%"
 />
 
               <p className='mt-3 text-center' style={{color:"#6a6a6a",fontSize:"14px"}}>Don't have an account ? <a href="/register" style={{ textDecoration: "underline",color:"#0b6a67" }}>Sign Up</a></p></div>
