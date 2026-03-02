@@ -1,0 +1,55 @@
+/* @tailwind base;
+@tailwind components; */
+@tailwind utilities;
+
+@import 'flowbite';
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+
+body{
+  background-color: #0ABAB5;
+  background-image: linear-gradient(180deg, #059685 0%, #67cdac 100%);
+  color: "#ffffff";
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+@layer utilities {
+  @keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeText {
+    to { opacity: 1; }
+  }
+
+  @keyframes loading {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .animate-slideUp {
+    animation: slideUp 1.5s ease forwards;
+  }
+
+  .animate-fadeText {
+    animation: fadeText 4s ease forwards;
+  }
+
+  .animate-loading {
+    animation: loading 5.5s linear forwards;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 6s ease-in-out;
+  }
+}

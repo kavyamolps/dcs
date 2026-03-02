@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #1e293b;
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.logout-btn {
+  background-color: #ef4444;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+.history-btn {
+  background-color: #ffffff!important;
+  border: none;
+  padding: 8px 16px;
+  color: #027773;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.history-btn:hover {
+  background-color: #dc2626;
+}
+
+.headersect{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.main-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1e293b;
+}
+
+.section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.section label {
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.section input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.score-section {
+  margin-top: 40px;
+}
+
+.option-block {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.score-input {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.score-input input {
+  width: 100px;
+}
+
+.option-title {
+  color: #027773;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.submit-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  width: 150px; 
+}
+
+.submit-btn:hover {
+  background-color: #1e40af;
+}
+
+/* For small devices */
+@media (max-width: 768px) {
+  .submit-btn {
+    width: 100%;
+  }
+}
+.section input,
+.section select {
+  height: 50px; 
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: white;
+  box-sizing: border-box;
+}
+.section select {
+  appearance: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVENESS  */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* Reduce container padding */
+  .container {
+    padding: 20px;
+  }
+
+  /* Header stacking */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .headersect {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Criteria row → stack vertically */
+  .section > div {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  /* First input (Criterion Name) */
+  .section > div input[type="text"] {
+    flex: 2;
+    min-width: 0;
+  }
+
+  /* Second input (Weight) */
+  .section > div input[type="number"] {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* Dropdown should go to next line */
+  .section > div select {
+    flex: 100%;
+  }
+
+  /* Score input layout stack */
+  .score-input {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .score-input input {
+    width: 100%;
+  }
+
+  /* Submit button full width */
+  .submit-btn {
+    width: 100%;
+  }
+
+  /* Sidebar full width on mobile */
+  .sidebar {
+    width: 100%;
+    right: -100%;
+  }
+
+  .sidebar.active {
+    right: 0;
+  }
+}
