@@ -155,7 +155,8 @@ function Auth({ register }) {
             {
               register ? <div><Button onClick={handleRegister} className='!text-olive-50 w-full' type="button">SignUp</Button><p className='mt-3 text-center' style={{color:"#6a6a6a",fontSize:"14px"}}>Already have an account ? <a href="/login" style={{ textDecoration: "underline",color:"#0b6a67" }}>login</a></p></div> : <div><Button className='!text-olive-50 w-full mb-2' type="button" onClick={handleLogin}>SignIn</Button>
               
-              <GoogleLogin 
+              <div className="w-full mb-2">
+                <GoogleLogin 
   onSuccess={credentialResponse => {
     console.log(credentialResponse);
     handleGoogleLogin(credentialResponse)
@@ -164,8 +165,8 @@ function Auth({ register }) {
     console.log('Login Failed');
   }}
   size="large"
-  width="100%"
 />
+              </div>
 
               <p className='mt-3 text-center' style={{color:"#6a6a6a",fontSize:"14px"}}>Don't have an account ? <a href="/register" style={{ textDecoration: "underline",color:"#0b6a67" }}>Sign Up</a></p></div>
               
