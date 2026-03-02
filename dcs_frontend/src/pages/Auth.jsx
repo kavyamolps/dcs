@@ -153,7 +153,7 @@ function Auth({ register }) {
               </div>
             </div>
             {
-              register ? <div><Button onClick={handleRegister} className='!text-olive-50 w-full' type="button">SignUp</Button><p className='mt-3 text-center' style={{color:"#6a6a6a",fontSize:"14px"}}>Already have an account ? <a href="/login" style={{ textDecoration: "underline",color:"#0b6a67" }}>login</a></p></div> : <div><Button className='!text-olive-50 w-full mb-2' type="button" onClick={handleLogin}>SignIn</Button>
+              register ? <div><Button onClick={handleRegister} className='!text-olive-50 w-full' type="button">SignUp</Button><p className='mt-3 text-center' style={{color:"#6a6a6a",fontSize:"14px"}}>Already have an account ? <a href="/login" style={{ textDecoration: "underline",color:"#0b6a67" }}>login</a></p></div> : <div><Button className='!text-olive-50 w-full mb-2 sigin_button' type="button" onClick={handleLogin}>SignIn</Button>
               
               <div className="google-btn-wrapper mb-2">
                 <GoogleLogin 
