@@ -70,3 +70,10 @@ button:hover {
 .Toastify__toast--success .Toastify__toast-icon svg {
   fill: #ffffff !important;
 }
+div[role="button"] {
+  width: 100% !important;
+}
+
+iframe {
+  width: 100% !important;
+}
