@@ -71,14 +71,3 @@ button:hover {
   fill: #ffffff !important;
 }
 
-.google-btn-wrapper {
-  width: 100%;
-}
-
-.google-btn-wrapper > div {
-  width: calc(100%) !important;
-}
-
-.google-btn-wrapper iframe {
-  width: calc(100%) !important;
-}
