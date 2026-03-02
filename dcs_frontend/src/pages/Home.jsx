@@ -182,8 +182,8 @@ const totalWeight = criteria.reduce(
   try {
     const isEditing = location.state?.decision?._id;
     const url = isEditing
-    ? `http://localhost:3000/api/update_decision/${location.state.decision._id}`
-    : "http://localhost:3000/api/add_decision";
+    ? `https://decision-companion-system-lyq7.onrender.com/api/update_decision/${location.state.decision._id}`
+    : "https://decision-companion-system-lyq7.onrender.com/api/add_decision";
 
     const method = isEditing ? "PUT" : "POST";
 
