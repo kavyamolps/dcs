@@ -58,7 +58,7 @@ exports.googleLogin = async (req, res) => {
         else {
             const newUser = new User({ username, email, password, profile })
             await newUser.save()
-            const token = jwt.sign({ userMail: existingUser.email }, process.env.jwtKey)
+            const token = jwt.sign({ userMail: newUser.email }, process.env.jwtKey)
             console.log(token)
             res.status(200).json({ message: "Login Success", existingUser, token })
         }
